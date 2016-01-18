@@ -1,0 +1,7 @@
+import myapp.User
+
+model {
+	User user
+}
+
+json tmpl.user(user)
