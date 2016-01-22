@@ -94,6 +94,9 @@ bower {
     'angular-mocks'('1.4.x') {
         source 'angular-mocks.js' >> '/angular/'
     }
+    'angular-route'('1.4.x'){
+
+    }
 }
 
 karma {

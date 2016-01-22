@@ -1,5 +1,5 @@
 <div id="status" role="complementary">
-    <h1>Application Status</h1>
+    <h1>Application Status:{{vm.msg}}</h1>
     <ul>
         <li>Environment: {{vm.applicationData.environment}}</li>
         <li>App profile: {{vm.applicationData.appprofile}}</li>
@@ -30,8 +30,8 @@
     <div id="controller-list" role="navigation">
         <h2>Available Controllers:</h2>
         <ul>
-            <li ng-repeat="c in vm.applicationData.controllers | orderBy:'name'" class="controller">
-                <a ng-href="{{vm.contextPath}}/{{c.logicalPropertyName}}">{{c.name}}</a>
+            <li ng-repeat="c in vm.applicationData.controllers" class="controller">
+                <a href="#{{vm.contextPath}}/{{c.logicalPropertyName}}">{{c.name}}</a>
             </li>
         </ul>
     </div>
