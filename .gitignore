@@ -1,0 +1,6 @@
+.gradle
+.idea
+.asscache
+node_modules
+build
+grails-app/assets/bower
