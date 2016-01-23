@@ -1,20 +1,14 @@
-/**
- * Created by sapanp on 20-01-2016.
- */
-var context = "/assets/myapp"
-var myapp = angular.module('myapp.user');
-myapp.config(['$routeProvider',
-    function($routeProvider) {
+//= wrapped
+
+angular.module("myapp.user")
+    .config(function($routeProvider) {
         $routeProvider.
         when('/user', {
-            templateUrl: context+'/user/templates/user.tpl.html',
+            templateUrl: "/myapp/user/user.html",
             controller: "UserListController as ctrl"
         }).
         when('/user/:userId', {
-            templateUrl: context+'/user/templates/show.tpl.html',
+            templateUrl: "/myapp/user/show.html",
             controller: "UserShowController as ctrl"
-        }).
-        otherwise({
-            redirectTo: 'templates/404.html'
-        });
-    }]);
+        })
+    });
