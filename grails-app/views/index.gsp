@@ -83,7 +83,7 @@
 </head>
 <body ng-app="myapp">
     <div id="grailsLogo" role="banner"><a href="http://grails.org"><asset:image src="grails_logo.png" alt="Grails"/></a></div>
-    <a href="#page-body" class="skip"><g:message code="default.link.skip.label" default="Skip to content&hellip;"/></a>
+
     <div ng-view></div>
     <div class="footer" role="contentinfo"></div>
     <asset:javascript src="myapp/app" />
