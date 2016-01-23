@@ -7,7 +7,9 @@ angular
 function ctrl(applicationDataFactory, contextPath) {
     var vm = this;
     vm.contextPath = contextPath;
+    alert(vm.contextPath);
     applicationDataFactory.get().then(function(response) {
         vm.applicationData = response.data;
+        vm.msg= 'Yo!!!';
     });
 }

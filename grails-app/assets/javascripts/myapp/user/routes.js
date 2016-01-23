@@ -1,7 +1,7 @@
 /**
  * Created by sapanp on 20-01-2016.
  */
-var context = "/assets/myapp";
+var context = "/assets/myapp"
 var myapp = angular.module('myapp.user');
 myapp.config(['$routeProvider',
     function($routeProvider) {
@@ -15,6 +15,6 @@ myapp.config(['$routeProvider',
             controller: "UserShowController as ctrl"
         }).
         otherwise({
-            templateUrl: 'templates/404.html'
+            redirectTo: 'templates/404.html'
         });
     }]);
