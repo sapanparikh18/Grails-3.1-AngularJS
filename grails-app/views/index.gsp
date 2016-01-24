@@ -3,89 +3,46 @@
 <head>
     <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <title>Welcome to Grails</title>
+    <title>Grails Angular Profile Demo</title>
     <meta name="viewport" content="width=device-width, initial-scale=1">
+
+    <asset:stylesheet href="materialize/css/materialize.min.css"/>
+    <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+
     <script type="text/javascript">
         window.contextPath = "${request.contextPath}";
     </script>
-    <style type="text/css" media="screen">
-        #status {
-            background-color: #eee;
-            border: .2em solid #fff;
-            margin: 2em 2em 1em;
-            padding: 1em;
-            width: 12em;
-            float: left;
-            -moz-box-shadow: 0px 0px 1.25em #ccc;
-            -webkit-box-shadow: 0px 0px 1.25em #ccc;
-            box-shadow: 0px 0px 1.25em #ccc;
-            -moz-border-radius: 0.6em;
-            -webkit-border-radius: 0.6em;
-            border-radius: 0.6em;
-        }
-
-        #status ul {
-            font-size: 0.9em;
-            list-style-type: none;
-            margin-bottom: 0.6em;
-            padding: 0;
-        }
-
-        #status li {
-            line-height: 1.3;
-        }
-
-        #status h1 {
-            text-transform: uppercase;
-            font-size: 1.1em;
-            margin: 0 0 0.3em;
-        }
-
-        #page-body {
-            margin: 2em 1em 1.25em 18em;
-        }
-
-        h2 {
-            margin-top: 1em;
-            margin-bottom: 0.3em;
-            font-size: 1em;
-        }
-
-        p {
-            line-height: 1.5;
-            margin: 0.25em 0;
-        }
-
-        #controller-list ul {
-            list-style-position: inside;
-        }
-
-        #controller-list li {
-            line-height: 1.3;
-            list-style-position: inside;
-            margin: 0.25em 0;
-        }
-
-        @media screen and (max-width: 480px) {
-            #status {
-                display: none;
-            }
-
-            #page-body {
-                margin: 0 1em 1em;
-            }
-
-            #page-body h1 {
-                margin-top: 0;
-            }
-        }
-    </style>
 </head>
 <body ng-app="myapp">
-    <div id="grailsLogo" role="banner"><a href="http://grails.org"><asset:image src="grails_logo.png" alt="Grails"/></a></div>
-    <a href="#page-body" class="skip"><g:message code="default.link.skip.label" default="Skip to content&hellip;"/></a>
+<ul id="dropdown1" class="dropdown-content">
+    <li><a href="#user/create">Create</a></li>
+    <li><a href="#user">List</a></li>
+    <li class="divider"></li>
+    <li><a href="#index">Home</a></li>
+</ul>
+<nav>
+    <div class="container">
+    <div class="nav-wrapper">
+        <a href="#!" class="brand-logo">Grails</a>
+        <ul class="right hide-on-med-and-down">
+            <!-- Dropdown Trigger -->
+            <li><a class="dropdown-button" href="#!" data-activates="dropdown1">User<i class="material-icons right">arrow_drop_down</i></a></li>
+        </ul>
+    </div>
+    </div>
+</nav>
+<div class="container">
     <div ng-view></div>
+</div>
     <div class="footer" role="contentinfo"></div>
+    <asset:javascript src="jquery/jquery.js"></asset:javascript>
+    <asset:javascript src="materialize/js/materialize.min.js"></asset:javascript>
     <asset:javascript src="myapp/app" />
+
+<script>
+    $(function(){
+        $(".dropdown-button").dropdown();
+    })
+</script>
 </body>
 </html>

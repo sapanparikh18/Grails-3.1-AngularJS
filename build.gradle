@@ -97,6 +97,9 @@ bower {
     'angular-route'('1.4.x'){
         source 'angular-route.js' >> '/angular/'
     }
+    'jquery'(''){
+
+    }
 }
 
 karma {

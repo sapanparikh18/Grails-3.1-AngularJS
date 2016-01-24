@@ -2,8 +2,9 @@
 
 angular
     .module("myapp.user")
-    .controller("UserListController", UserListController)
-    .controller("UserShowController", UserShowController);
+    .controller("UserListController", ['userDataFactoryService',UserListController])
+    .controller("UserShowController", ['userDataFactoryService','$routeParams',UserShowController])
+    .controller("UserCreateController", ['userDataFactoryService','$routeParams',UserCreateController])
 
 function UserListController(userService) {
 
@@ -18,4 +19,8 @@ function UserShowController(userService){
     userService.show({userId:1,action:'show'},function(user){
         self.user = user;
     });
+}
+function UserCreateController(userService){
+    var self = this;
+    // TODO implement user service code
 }

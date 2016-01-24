@@ -1,5 +1,7 @@
+<div class="row">
+    <div class="col l3">
 <div id="status" role="complementary">
-    <h1>Application Status:{{vm.msg}}</h1>
+    <h5>Application Status:{{vm.msg}}</h5>
     <ul>
         <li>Environment: {{vm.applicationData.environment}}</li>
         <li>App profile: {{vm.applicationData.appprofile}}</li>
@@ -9,17 +11,19 @@
         <li>JVM version: {{vm.applicationData.jvmversion}}</li>
         <li>Reloading active: {{vm.applicationData.reloadingagentenabled}}</li>
     </ul>
-    <h1>Artefacts</h1>
+    <h5>Artefacts</h5>
     <ul>
         <li>Controllers: {{vm.applicationData.artefacts.controllers}}</li>
         <li>Domains: {{vm.applicationData.artefacts.domains}}</li>
         <li>Services: {{vm.applicationData.artefacts.services}}</li>
     </ul>
-    <h1>Installed Plugins</h1>
+    <h5>Installed Plugins</h5>
     <ul>
         <li ng-repeat="plugin in vm.applicationData.plugins">{{plugin.name}} - {{plugin.version}}</li>
     </ul>
 </div>
+    </div>
+    <div class="col l9">
 <div id="page-body" role="main">
     <h1>Welcome to Grails</h1>
     <p>Congratulations, you have successfully started your first Grails application! At the moment
@@ -34,5 +38,7 @@
                 <a href="#{{vm.contextPath}}/{{c.logicalPropertyName}}">{{c.name}}</a>
             </li>
         </ul>
+    </div>
+</div>
     </div>
 </div>
