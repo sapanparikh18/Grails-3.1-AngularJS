@@ -1,7 +1,14 @@
+<div class="card">
+    <div class="card-content">
+        <div class="card-title">User List</div>
 <table>
-    <tr><th>Dob</th><th>Name</th></tr>
+    <tr><th>Id</th><th>First Name</th><th>Last Name</th><th>DoB</th></tr>
     <tr ng-repeat="user in ctrl.users">
+        <td ng-bind="user.id"></td>
+        <td ><a href="#user/{{user.id}}" ng-bind="user.firstName"></a></td>
+        <td ng-bind="user.lastName"></td>
         <td ng-bind="user.dob"></td>
-        <td ng-bind="user.firstName"></td>
     </tr>
 </table>
+    </div>
+</div>

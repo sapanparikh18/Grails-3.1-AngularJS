@@ -8,7 +8,7 @@ class User {
     static constraints = {
         firstName nullable: false
         lastName nullable: false
-        dob nullable: false
+        dob nullable: true
         passowrd nullable: false, passowrd:true
     }
 }

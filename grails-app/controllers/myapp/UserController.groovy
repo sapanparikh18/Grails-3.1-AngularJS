@@ -10,6 +10,7 @@ class UserController {
     static allowedMethods = [save: "POST", update: "PUT", delete: "DELETE"]
 
     def index(Integer max) {
+        println "--------"
         params.max = Math.min(max ?: 10, 100)
         respond User.list(params), model:[userCount: User.count()]
     }
@@ -20,6 +21,7 @@ class UserController {
 
     @Transactional
     def save(User user) {
+        println user
         if (user == null) {
             transactionStatus.setRollbackOnly()
             render status: NOT_FOUND
@@ -39,6 +41,7 @@ class UserController {
 
     @Transactional
     def update(User user) {
+        println "--------"
         if (user == null) {
             transactionStatus.setRollbackOnly()
             render status: NOT_FOUND
