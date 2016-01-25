@@ -6,6 +6,14 @@ Once a class+controller+views are created in the project we create ng-controller
 
 See the project commit history for reference
 
+Following are the key js files
+
+1. grails-app\assets\javascripts\myapp\core\services\DomainServiceFactory.js
+2. grails-app\assets\javascripts\myapp\user\services\userDataFactoryService.js
+3. grails-app\assets\javascripts\myapp\user\controllers\userController.js
+4. grails-app\assets\javascripts\myapp\user\routes.js
+
+
 ######Landing page
 ![Landing Page](https://tinypng.com/site/output/4f9a8i9lk3v10ofo.png/1.png)
 ######List Page
