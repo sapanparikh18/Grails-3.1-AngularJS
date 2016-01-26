@@ -4,7 +4,7 @@ angular
     .module("myapp.user")
     .controller("UserListController", ['userDataFactoryService',UserListController])
     .controller("UserShowController", ['userDataFactoryService','$routeParams','$location',UserShowController])
-    .controller("UserCreateController", ['userDataFactoryService','$location',UserCreateController])
+    .controller("UserCreateController", ['userDataFactoryService','$routeParams','$location',UserCreateController])
 function UserListController(userService) {
 
     var self = this;
@@ -27,10 +27,16 @@ function UserShowController(userService,$routeParams,$location){
         }
     }
 }
-function UserCreateController(userService,$location){
+
+function UserCreateController(userService,$routeParams,$location){
     var self = this;
+    if($routeParams.userId){
+        userService.show({userId:$routeParams.userId,action:'show'},function(user){
+            self.user = user;
+        });
+    }
     self.save = function(user){
-        //console.log(userService.update);
+        user.dob = null;
         userService.save({action:'save'},user,function(res){
             if(res.id){
                 $location.path("/user/"+res.id);

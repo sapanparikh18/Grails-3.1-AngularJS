@@ -6,6 +6,7 @@
         First Name: {{ctrl.user.firstName}}<br>
         Last Name: {{ctrl.user.lastName}}<br>
         DoB: {{ctrl.user.dob}}<br>
+        <a href="#/user/edit/{{ctrl.user.id}}" class="btn">Edit</a>
         <input class="btn red white-text" type="submit" ng-click="ctrl.delete(user)" value="Delete" />
     </div>
 </div>

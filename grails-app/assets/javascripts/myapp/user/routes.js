@@ -11,6 +11,10 @@ angular.module("myapp.user")
             templateUrl: "/myapp/user/create.html",
             controller: "UserCreateController as ctrl"
         }).
+        when('/user/edit/:userId', {
+            templateUrl: "/myapp/user/create.html",
+            controller: "UserCreateController as ctrl"
+        }).
         when('/user/:userId', {
             templateUrl: "/myapp/user/show.html",
             controller: "UserShowController as ctrl"

@@ -2,21 +2,21 @@
     <form class="col s12">
         <div class="row">
             <div class="input-field col s6">
-                <input ng-model="user.firstName"  id="first_name" type="text" class="validate">
+                <input ng-model="ctrl.user.firstName"  id="first_name" type="text" class="validate">
                 <label for="first_name">First Name</label>
             </div>
             <div class="input-field col s6">
-                <input ng-model="user.lastName" id="last_name" type="text" class="validate">
+                <input ng-model="ctrl.user.lastName" id="last_name" type="text" class="validate">
                 <label for="last_name">Last Name</label>
             </div>
         </div>
         <div class="row">
             <div class="input-field col s12">
-                <input ng-model="user.password"  id="password" type="password" class="validate">
+                <input ng-model="ctrl.user.password"  id="password" type="password" class="validate">
                 <label for="password">Password</label>
             </div>
         </div>
-        <input class="btn" type="submit" ng-click="ctrl.save(user)" value="Save" />
+        <input class="btn" type="submit" ng-click="ctrl.save(ctrl.user)" value="Save" />
 
     </form>
 </div>
